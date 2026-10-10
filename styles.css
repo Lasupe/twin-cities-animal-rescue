@@ -289,3 +289,69 @@ footer a {
         padding: 40px;
     }
 }
+/* Touchstone 4: Form validation styling */
+
+.error-message {
+    display: block;
+    color: #A32121;
+    font-size: 0.9rem;
+    font-weight: bold;
+    margin-top: 6px;
+}
+
+.error-message:empty {
+    display: none;
+}
+
+/* Highlight fields containing invalid information */
+input[aria-invalid="true"],
+select[aria-invalid="true"],
+textarea[aria-invalid="true"] {
+    border: 2px solid #A32121;
+    background-color: #FFF5F5;
+}
+
+/* Highlight the form status message */
+#form-status:not(:empty) {
+    padding: 12px;
+    border-radius: 8px;
+    background-color: #E8F2ED;
+    color: #245C4F;
+    font-weight: bold;
+}
+
+/* Style the volunteer opportunity selector */
+#volunteer-selector select {
+    display: block;
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    margin: 12px 0;
+    border: 1px solid #245C4F;
+    border-radius: 6px;
+    font: inherit;
+}
+
+#volunteer-selector button {
+    padding: 12px 18px;
+    margin-bottom: 12px;
+    background-color: #245C4F;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 6px;
+    font: inherit;
+    cursor: pointer;
+}
+
+#volunteer-selector button:hover,
+#volunteer-selector button:focus-visible {
+    background-color: #184238;
+}
+
+#opportunity-result:not(:empty) {
+    margin-top: 16px;
+    padding: 16px;
+    border-left: 4px solid #245C4F;
+    background-color: #F7F5EF;
+    border-radius: 6px;
+}

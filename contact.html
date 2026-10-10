@@ -41,7 +41,7 @@
         <section>
             <h2>Volunteer and Foster Interest Form</h2>
 
-            <form action="#" method="get">
+            <form id="interest-form" action="#" method="get" novalidate>
                 <fieldset>
                     <legend>Personal Information</legend>
 
@@ -52,7 +52,11 @@
                                name="full-name"
                                autocomplete="name"
                                required
-                               minlength="2">
+                               minlength="2"
+                               aria-describedby="name-error">
+                        <span id="name-error"
+                              class="error-message"
+                              aria-live="polite"></span>
                     </p>
 
                     <p>
@@ -61,7 +65,11 @@
                                id="email"
                                name="email"
                                autocomplete="email"
-                               required>
+                               required
+                               aria-describedby="email-error">
+                        <span id="email-error"
+                              class="error-message"
+                              aria-live="polite"></span>
                     </p>
                 </fieldset>
 
@@ -97,6 +105,10 @@
                                value="adoption">
                         <label for="adoption">Adoption Information</label>
                     </p>
+
+                    <p id="interest-error"
+                       class="error-message"
+                       aria-live="polite"></p>
                 </fieldset>
 
                 <fieldset>
@@ -108,7 +120,8 @@
                         </label>
                         <select id="availability"
                                 name="availability"
-                                required>
+                                required
+                                aria-describedby="availability-error">
                             <option value="">
                                 Select your availability
                             </option>
@@ -125,6 +138,9 @@
                                 Flexible Schedule
                             </option>
                         </select>
+                        <span id="availability-error"
+                              class="error-message"
+                              aria-live="polite"></span>
                     </p>
 
                     <p>
@@ -133,7 +149,8 @@
                         </label>
                         <select id="experience"
                                 name="experience"
-                                required>
+                                required
+                                aria-describedby="experience-error">
                             <option value="">
                                 Select your experience level
                             </option>
@@ -150,6 +167,9 @@
                                 Professional Animal Care Experience
                             </option>
                         </select>
+                        <span id="experience-error"
+                              class="error-message"
+                              aria-live="polite"></span>
                     </p>
                 </fieldset>
 
@@ -170,7 +190,11 @@
                                   minlength="10"
                                   maxlength="1000"
                                   required
+                                  aria-describedby="message-error"
                                   placeholder="Tell us why you would like to volunteer, foster, or learn about adoption."></textarea>
+                        <span id="message-error"
+                              class="error-message"
+                              aria-live="polite"></span>
                     </p>
                 </fieldset>
 
@@ -182,6 +206,10 @@
                         Clear Form
                     </button>
                 </p>
+
+                <p id="form-status"
+                   role="status"
+                   aria-live="polite"></p>
             </form>
 
             <p>
@@ -231,5 +259,7 @@
             <a href="index.html">Return to Home</a>
         </p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>

@@ -109,6 +109,34 @@
                  width="400">
         </section>
 
+        <!-- Touchstone 4: Interactive Volunteer Opportunity Selector -->
+        <section id="volunteer-selector">
+            <h2>Find Your Volunteer Opportunity</h2>
+
+            <p>
+                Interested in helping animals in need?
+                Select an opportunity below to learn how
+                you can get involved.
+            </p>
+
+            <label for="opportunity-choice">
+                Choose an opportunity:
+            </label>
+
+            <select id="opportunity-choice">
+                <option value="">-- Select an opportunity --</option>
+                <option value="volunteer">General Volunteering</option>
+                <option value="foster">Foster Care</option>
+                <option value="adoption">Adoption Events</option>
+            </select>
+
+            <button type="button" id="show-opportunity">
+                Show Opportunity
+            </button>
+
+            <div id="opportunity-result" aria-live="polite"></div>
+        </section>
+
         <section>
             <h2>Get Involved</h2>
             <p>
@@ -132,5 +160,7 @@
             <a href="contact.html">Contact our rescue team</a>
         </p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
